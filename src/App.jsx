@@ -9,12 +9,14 @@ import './components/navbar.css';
 import Card from './components/CityCard.jsx';
 import './components/CityCard.css';
 
+import ZipCodeFetch from './components/zipcode';
+
 function App() {
   return (
       <div>
         <AppRouter/>
     <div className="card-container">
-      <Card LocationText="New York" Long="100" Lat="000" />
+      <ZipCodeFetch />
     </div>
       </div>
   );
