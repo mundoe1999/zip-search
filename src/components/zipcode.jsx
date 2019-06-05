@@ -28,7 +28,7 @@ class ZipCodeFetch extends Component{
     let objArray = this.state.json || [];
     return(
       <div className = "CardContainer">
-  <h2>Zip-Code Search</h2>;
+  <h2>Zip-Code Search</h2>
       <input type='text' value={this.state.zipAddress} onChange={this.ChangeZip} onKeyPress={this.handleKeyPress}/>
         {
           objArray.map(item => {

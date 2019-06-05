@@ -27,9 +27,8 @@ class Card extends Component {
             <li>
               Location: ({this.props.coordinates})
             </li>
-          <li>{this.props.population} </li>
-          <li>{this.props.wages}</li>
-          <li>{this.props.zip}</li>
+            <li> Population: {this.props.population} </li>
+            <li> Wages: ${this.props.wages}</li>
           </ul>
             </div>
           </div>

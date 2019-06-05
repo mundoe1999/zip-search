@@ -20,9 +20,9 @@ function AppRouter() {
       <div>
         <nav>
           <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
+            {/* <li> */}
+              {/* <Link to="/">Home</Link> */}
+            {/* </li> */}
             <li>
               <Link to="/City/">City</Link>
             </li>

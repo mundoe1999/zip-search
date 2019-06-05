@@ -1,22 +1,37 @@
 .inner-card-div {
     text-align: left;
-    margin-left: 15px;
     flex: 1;
 }
 
 .inner-header-div {
-    margin-left: 15px;
 }
 
 .wrapper {
-    display:flex;
-    align-items: center;
+    text-align: center;
     background-color: #DDD;
-    padding: 20px;
-    border-radius: 20px;
-    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    transition: all .3s ease-in-out;
+    border-style: none;
+    border-color: #FFF;
+}
+.wrapper:hover {
+    background-color: #EEE;
+    border-color: #DDD;
+    border-width: 1px;
+    border-style: solid;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+    transition: all .3s ease-in-out;
 }
 
 ul {
     list-style: none;
+    text-align: center;
+    padding-inline-start: 0px;
 }

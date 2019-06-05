@@ -27,18 +27,18 @@ class CityFetch extends Component{
   render(){
     let objArray = this.state.json || [];
     return(
-      <div className = "CardContainer">
-    <h2>City Search</h2>;
-      <input type='text' value={this.state.city} onChange={this.ChangeCity} onKeyPress={this.handleKeyPress}/>
-        {
-          objArray.map(item => {
-            return(
-              <Card zip={item} />
-            );
-          })
-        }
+        <div className = "CardContainer">
+          <h2>City Search</h2>
+          <input type='text' value={this.state.city} onChange={this.ChangeCity} onKeyPress={this.handleKeyPress}/>
+          {
+              objArray.map(item => {
+                  return(
+                      <Card zip={item} />
+                  );
+              })
+          }
 
-      </div>
+        </div>
     );
   }
 
