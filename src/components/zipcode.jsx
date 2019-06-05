@@ -1,25 +1,6 @@
 import React, { Component } from "react";
+import Card from './CityCard';
 
-class CityCard extends Component{
-  constructor(props){
-    super(props);
-  }
-  render(){
-    return (
-      <div>
-        {this.props.location}
-        <br/>
-        {this.props.coordinates}
-        <br/>
-        {this.props.population}
-        <br/>
-        {this.props.wages}
-        <br/>
-        <br/>
-      </div>
-    );
-  }
-}
 
 
 
@@ -47,11 +28,12 @@ class ZipCodeFetch extends Component{
     let objArray = this.state.json || [];
     return(
       <div className = "CardContainer">
+  <h2>Zip-Code Search</h2>;
       <input type='text' value={this.state.zipAddress} onChange={this.ChangeZip} onKeyPress={this.handleKeyPress}/>
         {
           objArray.map(item => {
             return(
-              <CityCard location={item["LocationText"]} coordinates={item["Long"] + " " + item["Lat"]}
+              <Card location={item["LocationText"]} coordinates={item["Long"] + " " + item["Lat"]}
               population={item["EstimatedPopulation"]} wages={item["TotalWages"]} />
             );
           })

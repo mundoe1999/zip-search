@@ -8,15 +8,15 @@ class Card extends Component {
         let cardContents = (
             <div className='wrapper'>
               <div className='inner-header-div'>
-                <h2> {this.props.LocationText} </h2>
+                <h2> {this.props.location} </h2>
               </div>
               <div className='inner-card-div'>
             <ul>
               <li>
-                Location: ({this.props.Long+","+this.props.Lat})
+                Location: ({this.props.coordinates})
               </li>
-            <li>{this.props.EstimatedPopulation} </li>
-            <li>{this.props.TotalWages}</li>
+            <li>{this.props.population} </li>
+            <li>{this.props.wages}</li>
             </ul>
               </div>
             </div>
