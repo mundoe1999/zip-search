@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ZipCodeFetch from "./zipcode";
+import CityFetch from "./city";
 
 function Index() {
   return <h2>Home</h2>;
@@ -32,7 +33,7 @@ function AppRouter() {
         </nav>
 
         <Route path="/" exact component={Index} />
-        <Route path="/City/" component={City} />
+        <Route path="/City/" component={CityFetch} />
         <Route path="/ZipCode/" component={ZipCodeFetch} />
       </div>
     </Router>
