@@ -65,17 +65,14 @@ class ZipCodeFetch extends Component{
     this.setState({
       zipAddress: event.target.value
     });
-
-
-  }
+  } //End ChangeZip
 
   handleKeyPress = (event) => {
     if(event.key == 'Enter'){
       console.log('enter press here! ')
       this.componentDidMount();
     }
-  }
+  } //End handleKeyPress
 };
 
 export default ZipCodeFetch;
-
