@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
-import AppRouter from './components/zipcode'
+
 import './App.css';
+import ZipCodeFetch from './components/zipcode';
 
 function App() {
   return (
     <div>
-      <AppRouter/>
+      <ZipCodeFetch zipAddress={10011}/>
     </div>
   );
 }
