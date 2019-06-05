@@ -17,7 +17,7 @@ class CityCard extends Component{
         <br/>
         <br/>
       </div>
-    )
+    );
   }
 }
 
@@ -29,7 +29,7 @@ class ZipCodeFetch extends Component{
     this.state = {
       zipAddress: "10012",
       json: NaN
-    }
+    };
     this.ChangeZip = this.ChangeZip.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
@@ -46,19 +46,19 @@ class ZipCodeFetch extends Component{
   render(){
     let objArray = this.state.json || [];
     return(
-      <div className = "CardContainer"> 
+      <div className = "CardContainer">
       <input type='text' value={this.state.zipAddress} onChange={this.ChangeZip} onKeyPress={this.handleKeyPress}/>
         {
           objArray.map(item => {
             return(
-              <CityCard location={item["LocationText"]} coordinates={item["Long"] + " " + item["Lat"]} 
+              <CityCard location={item["LocationText"]} coordinates={item["Long"] + " " + item["Lat"]}
               population={item["EstimatedPopulation"]} wages={item["TotalWages"]} />
-            )
+            );
           })
         }
 
       </div>
-    )
+    );
   }
 
   ChangeZip(event){
@@ -69,10 +69,11 @@ class ZipCodeFetch extends Component{
 
   handleKeyPress = (event) => {
     if(event.key == 'Enter'){
-      console.log('enter press here! ')
+        console.log('enter press here! ');
       this.componentDidMount();
     }
   } //End handleKeyPress
 };
 
 export default ZipCodeFetch;
+
