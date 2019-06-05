@@ -16,7 +16,6 @@ function App() {
       <div>
         <AppRouter/>
     <div className="card-container">
-      <ZipCodeFetch />
     </div>
       </div>
   );

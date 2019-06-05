@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import ZipCodeFetch from "./zipcode";
 
 function Index() {
   return <h2>Home</h2>;
@@ -10,7 +11,6 @@ function City() {
 }
 
 function ZipCode() {
-  return <h2>Zip-Code Search</h2>;
 }
 
 function AppRouter() {
@@ -33,7 +33,7 @@ function AppRouter() {
 
         <Route path="/" exact component={Index} />
         <Route path="/City/" component={City} />
-        <Route path="/ZipCode/" component={ZipCode} />
+        <Route path="/ZipCode/" component={ZipCodeFetch} />
       </div>
     </Router>
   );
