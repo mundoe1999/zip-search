@@ -13,15 +13,11 @@ class ZipCodeFetch extends Component{
     };
     this.ChangeZip = this.ChangeZip.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.loadAPI = this.loadAPI.bind(this);
   }
 
   componentDidMount(){
-    //Get The address
-    let address = 'http://ctp-zip-api.herokuapp.com/zip/'+this.state.zipAddress;
-    console.log(address);
-    fetch(address)
-    .then(response => response.json())
-    .then(myJson => this.setState({json: JSON.parse((JSON.stringify(myJson)))}));
+    this.loadAPI();
   }
 
   render(){
@@ -43,6 +39,16 @@ class ZipCodeFetch extends Component{
     );
   }
 
+  loadAPI(){
+    //Get The address
+    let address = 'http://ctp-zip-api.herokuapp.com/zip/'+this.state.zipAddress;
+    console.log(address);
+    fetch(address)
+    .then(response => response.json())
+    .then(myJson => this.setState({json: JSON.parse((JSON.stringify(myJson)))}));
+
+  }
+
   ChangeZip(event){
     this.setState({
       zipAddress: event.target.value
@@ -52,7 +58,7 @@ class ZipCodeFetch extends Component{
   handleKeyPress = (event) => {
     if(event.key == 'Enter'){
         console.log('enter press here! ');
-      this.componentDidMount();
+      this.loadAPI();
     }
   } //End handleKeyPress
 };
