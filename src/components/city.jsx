@@ -11,17 +11,11 @@ class CityFetch extends Component{
       city: "SPRINGFIELD",
       json: ""
     };
-    this.ChangeCity = this.ChangeCity.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
+
   }
 
   componentDidMount(){
-    //Get The address
-    let address = 'http://ctp-zip-api.herokuapp.com/city/'+this.state.city;
-    console.log(address);
-    fetch(address)
-    .then(response => response.json())
-    .then(myJson => this.setState({json: JSON.parse((JSON.stringify(myJson)))}));
+    this.loadAPI();
   }
 
   render(){
@@ -42,7 +36,17 @@ class CityFetch extends Component{
     );
   }
 
-  ChangeCity(event){
+  loadAPI(){
+    //Get The address
+    let address = 'http://ctp-zip-api.herokuapp.com/city/'+this.state.city;
+    console.log(address);
+    fetch(address)
+    .then(response => response.json())
+    .then(myJson => this.setState({json: JSON.parse((JSON.stringify(myJson)))}));
+
+  }
+
+  ChangeCity = (event) => {
     this.setState({
       city: event.target.value.toUpperCase()
     });
@@ -51,7 +55,7 @@ class CityFetch extends Component{
   handleKeyPress = (event) => {
     if(event.key === 'Enter'){
         console.log('enter press here! ');
-      this.componentDidMount();
+      this.loadAPI();
     }
   } //End handleKeyPress
 };

@@ -11,9 +11,8 @@ class ZipCodeFetch extends Component{
       zipAddress: "10012",
       json: NaN
     };
-    this.ChangeZip = this.ChangeZip.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-    this.loadAPI = this.loadAPI.bind(this);
+
+
   }
 
   componentDidMount(){
@@ -49,14 +48,14 @@ class ZipCodeFetch extends Component{
 
   }
 
-  ChangeZip(event){
+  ChangeZip = event => {
     this.setState({
       zipAddress: event.target.value
     });
   } //End ChangeZip
 
   handleKeyPress = (event) => {
-    if(event.key == 'Enter'){
+    if(event.key === 'Enter'){
         console.log('enter press here! ');
       this.loadAPI();
     }

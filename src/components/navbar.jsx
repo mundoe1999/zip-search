@@ -7,12 +7,6 @@ function Index() {
   return <h2>Home</h2>;
 }
 
-function City() {
-  return <h2>City Search</h2>;
-}
-
-function ZipCode() {
-}
 
 function AppRouter() {
   return (
@@ -33,7 +27,7 @@ function AppRouter() {
         </nav>
 
         <Route path="/" exact component={Index} />
-        <Route path="/City/" component={CityFetch} />
+        <Route path="/City/" exact component={CityFetch} />
         <Route path="/ZipCode/" component={ZipCodeFetch} />
       </div>
     </Router>

@@ -1,15 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
-
-import './App.css';
-
 import AppRouter from './components/navbar.jsx';
-import './components/navbar.css';
 
-import Card from './components/CityCard.jsx';
+//Importing Style
+import './App.css';
+import './components/navbar.css';
 import './components/CityCard.css';
 
-import ZipCodeFetch from './components/zipcode';
 
 function App() {
   return (
